@@ -1,0 +1,89 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: url(images/bg-pattern-top.svg), url(images/bg-pattern-bottom.svg);
+    background-color: hsl(185, 75%, 39%);
+    background-repeat: no-repeat; 
+    background-size: cover;
+    background-position: bottom 50vh right 50vw, top 50vh left 50vw;
+}
+
+main {
+    border-radius: 15px;
+    background-image: url(images/bg-pattern-card.svg);
+    background-color: white;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column; 
+    height: 350px;
+    width: 320px;
+    margin: 20vh auto;
+}
+
+
+.photo {
+    flex: 2;
+    position: relative;
+}
+
+.photo img {
+    border: 5px solid white;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    top: 90px;
+    left: 110px;
+}
+
+.person {
+    text-align: center;
+    font-family: 'Kumbh Sans', sans-serif;
+    color: hsl(0, 0%, 59%);
+}
+
+.person__detailes {
+    border-bottom: 1px solid  hsl(0, 0%, 59%);
+}
+.person__detailes-name {
+    color:hsl(229, 23%, 23%);
+    font-weight: bold;
+    margin: 0 8px;
+}
+
+.person__detailes-city {
+    margin: 16px 0;
+}
+
+.person__social {
+    padding: 24px 0;
+    display: flex;
+    flex-wrap: nowrap;
+}
+.person__social > div {
+    flex: 1;
+}
+
+.person__social-counter {
+    font-weight: bold;
+    color:hsl(229, 23%, 23%);
+}
+
+.person__social span {
+    font-size: 12px;
+}
+
+
+/* On screens that are 600px wide or less, make the menu links stack on top of each other instead of next to each other */
+@media screen and (min-width: 1440px) {
+    body {
+         background-position: bottom 40vh right 40vw, top 40vh left 40vw;
+    }
+
+    main {
+        margin: 25vh auto;
+    }
+  }
