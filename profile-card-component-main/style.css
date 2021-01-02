@@ -5,13 +5,20 @@
 body {
     margin: 0;
     padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     background: url(images/bg-pattern-top.svg), url(images/bg-pattern-bottom.svg);
     background-color: hsl(185, 75%, 39%);
     background-repeat: no-repeat; 
     background-size: cover;
     background-position: bottom 50vh right 50vw, top 50vh left 50vw;
 }
-
 main {
     border-radius: 15px;
     background-image: url(images/bg-pattern-card.svg);
@@ -19,14 +26,15 @@ main {
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column; 
-    height: 350px;
+    height: 380px;
     width: 320px;
     margin: 20vh auto;
 }
 
 
 .photo {
-    flex: 2;
+    flex: 200px;
+    flex-shrink: 0;
     position: relative;
 }
 
@@ -47,6 +55,7 @@ main {
 
 .person__detailes {
     border-bottom: 1px solid  hsl(0, 0%, 59%);
+    margin: 8px 0;
 }
 .person__detailes-name {
     color:hsl(229, 23%, 23%);
@@ -56,6 +65,7 @@ main {
 
 .person__detailes-city {
     margin: 16px 0;
+    font-size: 0.8em;
 }
 
 .person__social {
@@ -68,7 +78,7 @@ main {
 }
 
 .person__social-counter {
-    font-weight: bold;
+    font-weight: 700;
     color:hsl(229, 23%, 23%);
 }
 
